@@ -1,0 +1,40 @@
+[Minimum Requirement]
+
+
+
+- Use of the Csv file provided and put all the data in MongoDB.          Done
+
+— Implement functionality to list games in a web page.                     Done
+
+— Visually interactive responsive design listing all the games.            Adhere as much as possible
+
+— Zip all your Screenshots, Source code & Deployment Instructions.         Done[Code+Screenshots+ReadMe]
+
+
+
+— A feature to Search (via name).                                           Done.
+
+— Implement pagination                                                      Implement via category tabs
+
+— Custom elegant design, fonts and icons.                                    Adhere.
+
+
+— Use your imagination and add features                                     Tried.
+
+
+— Games Listing CSV File : http://hck.re/fGVUJw                             Used
+
+— Preferred Tech Stack:
+
+       Frontend JS Framework/Library:                                        Angular
+
+       CSS Framework:                                                         Custom Css
+
+       DB: NoSQL [MongoDB]                                                   MongoDB
+
+       Backend JS Framework:                                                Express [Node.js]
+
+Targeted Backend Languages/Tools/Technologies :                             Express [Node.js]
+
+
+

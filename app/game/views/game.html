@@ -1,0 +1,79 @@
+<div>
+
+    <!--<span class="search" id="game-search">-->
+      <!--<input ng-model="ex.searchByName" type="text" name="search" placeholder="Game Name">-->
+      <!--<svg class="icon" id="search-icon">-->
+          <!--<use xlink:href="#search"></use>-->
+      <!--</svg>-->
+    <!--</span>-->
+
+    <div class="search-filter">
+
+        <div class="search-filter-auto">
+
+            <md-input-container >
+                <input  placeholder="Search (by name)" ng-model="searchByName"  type="text" name="search">
+            </md-input-container>
+
+        </div>
+        <div>
+            <img src="assets/images/ic_filter_list_black_24dp_2x.png" ng-click="game.filterClick()" style="color:#8BC34A;vertical-align: middle;padding-top:2vh;" >
+            <div class="filter" ng-show="game.showFilter">
+                <div class="score">
+                    <span>Score</span>
+                    <span style="flex:1 1 auto;"></span>
+                    <img id="ascending" ng-click="game.ascendingFun()" class="filter-img" src="assets/images/ic_keyboard_arrow_up_black_24dp_1x.png" alt="ascending" title="ascending"  >
+                    <img id="descending" ng-click="game.descendingFun()" class="filter-img" src="assets/images/ic_keyboard_arrow_down_black_24dp_1x.png" alt="descending" title="descending"  >
+                </div>
+                <div class="platform">
+                    <span>Sort Platform</span>
+                    <md-checkbox ng-model="platform" color="primary" ng-click="game.sortPlatform()"></md-checkbox>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-container">
+
+        <div class="form-body card" ng-repeat="game in game.pagedItems">
+
+            <div class="card-head">
+                <img src="assets/images/dummy_image.png" width="100px" height="100px">
+                <div class="card-content">
+                    <div class="card-title">{{game.title}}</div>
+                    <div class="card-sub-title">{{game.platform}}</div>
+                </div>
+                <span style="flex:1 1 auto;"></span>
+                <div class="editors-choice" ng-if="game.editors_choice=='Y'"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="">
+        <div class="pagination">
+            <div ng-if="game.pager.pages && game.pager.pages.length" class="pagination-container">
+                <div ng-class="{disabled:game.pager.currentPage === 1}" class="page">
+                    <a ng-click="game.setPage(1)">First</a>
+                </div>
+                <div ng-class="{disabled:game.pager.currentPage === 1}" class="page">
+                    <a ng-click="game.setPage(game.pager.currentPage - 1)" >Previous</a>
+                </div>
+                <div ng-repeat="page in game.pager.pages" ng-class="{active:game.pager.currentPage === page}" class="page">
+                    <a ng-click="game.setPage(page)">{{page}}</a>
+                </div>
+                <div ng-class="{disabled:game.pager.currentPage === game.pager.totalPages}" class="page">
+                    <a ng-click="game.setPage(game.pager.currentPage + 1)">Next</a>
+                </div>
+                <div ng-class="{disabled:game.pager.currentPage === game.pager.totalPages}" class="page">
+                    <a ng-click="game.setPage(game.pager.totalPages)">Last</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
