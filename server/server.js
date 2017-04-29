@@ -16,6 +16,7 @@ var db = require('./config/database');
 var port = process.env.PORT || 3000;
 var app = express();
 
+
 // Connect to Database =========================================================
 
 mongoose.connect(db.url, function(err) {
@@ -28,7 +29,6 @@ mongoose.connect(db.url, function(err) {
 
 
 var Games = mongoose.model('Games');
-
 
 var API_URL = '/api/games';
 
@@ -70,12 +70,12 @@ exports.start = function(PORT,STATIC_DIR,DATA_FILE){
 
     function allGames(callback){
         console.log("allGames called");
-        Games.find({},function(err,docs){
+        Games.find({},function(err,games){
             if(err){
                 console.log(err);
             }
-            console.log("allGames",docs);
-            callback.send(docs);
+            console.log("allGames",games);
+            callback.send(games);
         });
 
     };
