@@ -12,10 +12,5 @@ SetUp:
 2) Type following command in command Line from home
    sudo npm install (For package dependency) in mac system  or runas npm install(Window User)
 
-3) Go to bin directory of mongodb where it installed and type followings commands into 2 different tabs
-
- -> ./mongod (db instance will run)
- -> ./mongo (mongo shell for query)
-
-4)Run following command :-> ./scripts/web-server.sh (Server will start and Landing Page will show)
+3)Run following command :-> ./scripts/web-server.sh (Server will start and Landing Page will show)
 
